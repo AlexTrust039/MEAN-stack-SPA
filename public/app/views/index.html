@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base href="/">
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Vollkorn+SC" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+	<link href="assets/css/styleMain.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/styleAbout.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styleAdd.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styleCatalog.css">
+
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+	<script src="assets/js/angular.js"></script>
+	<script src="assets/js/angular-route.js"></script>
+	<script src="app/app.js"></script>
+	<script src="app/routes.js"></script>
+	<script src="app/controllers/catalogCtrl.js"></script>
+	<script src="app/controllers/carCtrl.js"></script>
+	<!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<script src="assets/js/api.js"></script> -->
+	
+</head>
+
+<!-- ng-app место объявления ангулар приложения. главный модуль myApp  -->
+<body ng-app = "myApp">
+	
+<div class = container>
+	<header>
+		<div id="head">
+	        <img src="assets/css/img/logo.png" height="50" width="50">
+	        <nav id="navi">
+	            <a href="/">ГЛАВНАЯ</a>
+	            <a href="/about">О НАС</a>
+	            <a href="/catalog">КАТАЛОГ</a>
+	            <a href="/add">ДОБАВИТЬ АВТО</a>
+	        </nav>
+	    </div>
+	</header>
+
+	<div class = "main">
+			<p>ЦЕНТР ПРОДАЖИ <br> АВТОМОБИЛЕЙ</p>
+			<img src="assets/css/img/koleso.jpg" height="100" width="700">
+	</div>
+	
+	<!-- ng-view - директива обозначет место для вставки html. связана с ngRoute -->
+	<div ng-view>
+		
+	</div>
+	
+	<footer>
+		<p>Copyrigth <i class="far fa-copyright"></i> 2018, Alex Trust. All Rigths Reserved.</p>
+	</footer>
+
+</div>
+
+</body>
+</html>

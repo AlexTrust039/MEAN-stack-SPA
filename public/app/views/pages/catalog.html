@@ -1,0 +1,31 @@
+<div class="list">
+
+
+
+	<h1>Полный список доступных автомобилей (в наличии {{ list.length }})</h1>
+<label><b>Поиск по марке автомобиля</b></label>
+<input type="text" ng-model="model">
+<br>
+
+<div class='table'>
+		<table ng-repeat="x in list|filter:model">
+			<tr class="head">
+				<td>Марка/Модель</td>
+				<td>Год выпуска</td>
+				<td>Объем двигателя</td>
+				<td>КПП</td>
+				<td>Стоимоcть</td>
+			</tr>
+			<tr class="first">
+				<td>{{x.model}}</td>
+				<td>{{x.year}}</td>
+				<td>{{x.size}}</td>
+				<td>{{x.gearbox}}</td>
+				<td>{{x.price}}</td>
+			</tr>
+			<tr class="second">	
+				<td colspan="5">{{x.about}}</td>
+			</tr>
+		</table>
+</div>
+</div>

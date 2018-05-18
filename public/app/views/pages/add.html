@@ -1,0 +1,33 @@
+<div class='add_form'>
+		<h1>Добавление автомобиля в каталог</h1>
+
+		<!-- ng-submit - директива формы. при нажатии submit активируется функция контроллера add - addCar(); -->
+		<!-- в Data содержатся все данные формы, передается аргументом в addCar -->
+		<form id = 'form' ng-submit = "add.addCar(Data);">
+			<label><b>Модель:</b></label><br>
+			<input class="rad" type="text" name="model" placeholder="(пример) BMW 525i" ng-model='add.Data.model'>
+			<br>
+			<label><b>Год выпуска:</b></label><br>
+			<input class="rad" type="text" name="year" placeholder="(пример) 2005" ng-model='add.Data.year'>
+			<br>
+			<label><b>Трансмиссия:</b></label><br>
+			<input class="rad" type="text" name="gearbox" placeholder="(пример) АТ" ng-model='add.Data.gearbox'>
+			<br>
+			<label><b>Объем двигателя:</b></label> <br>
+			<input class="rad" type="text" name="es" placeholder="(пример) 1.6" ng-model='add.Data.es'>
+			<br>
+			<label><b>Стоимость:</b></label><br>
+			<input class="rad" type="text" name="price" placeholder="(пример) 500 000 rub" ng-model='add.Data.price'>
+			<br>
+			<label><b>Описание:</b></label><br>
+			<textarea class="rad" name = "about" cols = "44" rows = "5" ng-model='add.Data.about'></textarea>
+			<br>
+			
+			<input class="rad" type="submit" value="Добавить в каталог">
+		</form>
+		
+		<!-- ng-show показывает или скрывает div при условии существования message -->
+		<div id='msg' ng-show = "add.message">
+		<output>{{ add.message }}</output>
+		</div>
+</div>

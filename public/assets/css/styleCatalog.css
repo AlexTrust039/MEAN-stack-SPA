@@ -1,0 +1,55 @@
+.list {
+	background-image: linear-gradient(to bottom, #E6EBE6, transparent 400%), url("img/catalog.jpeg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    margin-bottom: 15px;
+}
+
+.table {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+table {
+	
+	font-family: 'Arial', sans-serif;
+	width: 70%;
+	/*border: white 1px solid;*/
+	border-collapse: collapse;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+table td {
+	border: white 1px solid;
+}
+
+.head td{
+	background-color: #A8EBA8;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.first td {
+	width: 20%;
+	padding: 20px;
+}
+
+.second td {
+	padding: 15px;
+	background-color: white;
+	text-align: left;
+	line-height: 25px;
+
+}
+
+.first td:first-child {
+	color:#D82A7D;
+}
+
